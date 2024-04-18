@@ -157,6 +157,18 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Test1
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>归并排序 import java.io.*; public class Main { static int[] brr = new int[100005]; static int[] arr = new int[100005]; static int n; public static void merge_sort(int l, int r) { if (l == r) { brr[l] = arr[l]; return; } int mid = l &#43; r &gt;&gt; 1; int left = l; int right = mid &#43; 1; int pos = l; merge_sort(l, mid); merge_sort(mid &#43; 1, r); while (pos &lt;= r) { if (left &gt; mid) { brr[pos&#43;&#43;] = arr[right&#43;&#43;]; } else if (right &gt; r) { brr[pos&#43;&#43;] = arr[left&#43;&#43;]; } else { if (arr[left] &gt; arr[right]) { brr[pos&#43;&#43;] = arr[right&#43;&#43;]; } else { brr[pos&#43;&#43;] = arr[left&#43;&#43;]; } } } for (int i = l; i &lt;= r; i&#43;&#43;) { arr[i] = brr[i]; } } public static void main(String[] args) throws IOException { StreamTokenizer streamTokenizer = new StreamTokenizer(new BufferedReader(new InputStreamReader(System....</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-04-18 17:55:52 +0800 CST'>April 18, 2024</span>&nbsp;·&nbsp;2 min</footer>
+  <a class="entry-link" aria-label="post link to Test1" href="https://x1uc.github.io/post/test1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">浅析注解和反射，反射的最佳实践（模拟一个框架）
     </h2>
   </header>
