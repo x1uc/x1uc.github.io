@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>x1uc's Blog</title><link>https://x1uc.github.io/</link><description>Recent content on x1uc's Blog</description><generator>Hugo -- 0.125.0</generator><language>en</language><lastBuildDate>Thu, 18 Apr 2024 14:19:11 +0800</lastBuildDate><atom:link href="https://x1uc.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>浅析注解和反射，反射的最佳实践（模拟一个框架）</title><link>https://x1uc.github.io/post/%E6%B5%85%E6%9E%90%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%8F%8D%E5%B0%84%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6/</link><pubDate>Thu, 18 Apr 2024 14:19:11 +0800</pubDate><guid>https://x1uc.github.io/post/%E6%B5%85%E6%9E%90%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%8F%8D%E5%B0%84%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6/</guid><description>参考的视频 # Java中的反射 Reflection in Java
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>x1uc&#39;s Blog</title>
+    <link>https://x1uc.github.io/</link>
+    <description>Recent content on x1uc&#39;s Blog</description>
+    <generator>Hugo -- 0.125.0</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Apr 2024 14:19:11 +0800</lastBuildDate>
+    <atom:link href="https://x1uc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>浅析注解和反射，反射的最佳实践（模拟一个框架）</title>
+      <link>https://x1uc.github.io/post/%E6%B5%85%E6%9E%90%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%8F%8D%E5%B0%84%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Thu, 18 Apr 2024 14:19:11 +0800</pubDate>
+      <guid>https://x1uc.github.io/post/%E6%B5%85%E6%9E%90%E6%B3%A8%E8%A7%A3%E5%92%8C%E5%8F%8D%E5%B0%84%E5%8F%8D%E5%B0%84%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E6%A8%A1%E6%8B%9F%E4%B8%80%E4%B8%AA%E6%A1%86%E6%9E%B6/</guid>
+      <description>参考的视频 # Java中的反射 Reflection in Java
 本文说明 本文是对参考视频中，讲解人讲解模拟框架的代码，不包含框架基本信息的讲解。如果想要了解反射的基本信息可以，观看参考视频。如果你和我一样是新手小白，观看完视频后，会让你对反射和注解有个新的认知。
 代码仓库 #反射的最佳实践-code](https://gitee.com/x1uc/Reflection-Code)
-项目结构 package1 autowired package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target({ElementType.METHOD, ElementType.CONSTRUCTOR}) @Retention(RetentionPolicy.RUNTIME) public @interface Autowired { } Bean package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target(ElementType.METHOD) @Retention(RetentionPolicy.RUNTIME) public @interface Bean { } Printable package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target(ElementType.METHOD) @Retention(RetentionPolicy.RUNTIME) public @interface Printable { } package2 Config package com.</description></item><item><title/><link>https://x1uc.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://x1uc.github.io/about/</guid><description>一个有理想的人</description></item></channel></rss>
+项目结构 package1 autowired package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target({ElementType.METHOD, ElementType.CONSTRUCTOR}) @Retention(RetentionPolicy.RUNTIME) public @interface Autowired { } Bean package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target(ElementType.METHOD) @Retention(RetentionPolicy.RUNTIME) public @interface Bean { } Printable package com.example.package1; import java.lang.annotation.ElementType; import java.lang.annotation.Retention; import java.lang.annotation.RetentionPolicy; import java.lang.annotation.Target; @Target(ElementType.METHOD) @Retention(RetentionPolicy.RUNTIME) public @interface Printable { } package2 Config package com.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://x1uc.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://x1uc.github.io/about/</guid>
+      <description>一个有理想的人</description>
+    </item>
+  </channel>
+</rss>
